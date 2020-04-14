@@ -15,7 +15,7 @@ APP_CONFIG = os.getenv('EVENT_CONSUMER_APP_CONFIG', None)
 TEST_ENABLED = False
 
 # http://docs.celeryproject.org/en/latest/userguide/configuration.html#std:setting-task_serializer
-SERIALIZER = 'json'
+SERIALIZER = os.getenv('EVENT_CONSUMER_SERIALIZER', 'json')
 ACCEPT = [SERIALIZER]
 
 QUEUE_NAME_PREFIX = ''
